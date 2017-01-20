@@ -10,9 +10,13 @@
       <span class="input-group-addon">Restaurant:</span>
       <input #newRestaurant class="form-control">
     </div>
-    <div class="input-group">
-      <span class="input-group-addon">Super:</span>
-      <input #newIsSuper  class="form-control">
+    <div class="form-group">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="isSuper" #newIsSuper value="true">
+          Super
+        </label>
+      </div>
     </div>
     <div class="input-group">
       <span class="input-group-addon">Calories:</span>
@@ -23,5 +27,5 @@
       <input #newDate type="date"  class="form-control">
     </div>
   </div>
-  <button type="button" name="button" class="btn btn-success" (click)="newBurrito(newType.value, newRestaurant.value, newIsSuper.value, newCalories.value, newDate.value)">Add</button>
+  <button type="button" name="button" class="btn btn-success" (click)="newBurrito(newType.value, newRestaurant.value, newIsSuper.checked, newCalories.value, newDate.value); newRestaurant.value = ''; newCalories.value =''; newDate.value =''">Add</button>
 </div>
