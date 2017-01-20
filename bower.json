@@ -1,0 +1,20 @@
+{
+  "name": "burrito-tracker",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Luke <luke.e.philips@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/lukeephilips/Portfolio",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
