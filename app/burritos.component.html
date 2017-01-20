@@ -1,8 +1,13 @@
-<h1>Burritos List</h1>
-<div class="panel panel-default" *ngFor="let burrito of childBurritosList">
-  <p>Type: {{burrito.type}}</p>
-  <p>From: {{burrito.type}}</p>
-  <p>Super: {{burrito.isSuper}}</p>
-  <p>Calories: {{burrito.calories}}</p>
-  <span>Eaten on: {{burrito.date}}</span>
+<div class="col-sm-4" *ngFor="let burrito of childBurritosList">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2>{{burrito.type}}</h2>
+    </div>
+    <div class="panel-body">
+      <p>From: {{burrito.restaurant}}</p>
+      <p>Super: {{burrito.isSuper}}</p>
+      <p>Calories: {{burrito.calories}}</p>
+      <span>Eaten on: {{burrito.date}}</span>
+    </div>
+  </div>
 </div>

@@ -1,2 +1,10 @@
-<h1>Burrito Tracker</h1>
-<burritos [childBurritosList]='masterBurritosList'></burritos>
+<div class="container">
+  <h1>Burrito Tracker</h1>
+  <div class="row">
+    <new-burrito (newBurritoSender)="addBurrito($event)" [childTypes]='masterTypes'></new-burrito>
+  </div>
+
+  <div class="row">
+    <burritos [childBurritosList]='masterBurritosList'></burritos>
+  </div>
+</div>
