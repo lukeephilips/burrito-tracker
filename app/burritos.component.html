@@ -1,6 +1,7 @@
 <div class="input-group">
   <span class="input-group-addon">Filter</span>
   <select class="form-control" (change)="onChange($event.target.value)">
+    <option value='all'>Show All</option>
     <option *ngFor="let type of types" [value]=type>{{type}}</option>
   </select>
 </div>

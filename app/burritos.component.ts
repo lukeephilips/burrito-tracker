@@ -15,10 +15,7 @@ export class BurritosComponent {
   filterByType: string = "all";
 
   onChange(optionFromMenu) {
-    console.log(this.filterByType)
-    
   this.filterByType = optionFromMenu;
-  console.log(this.filterByType)
 }
 
   selectBurrito(burrito){

@@ -1,5 +1,7 @@
-import {Pipe, PipeTransform} from '@angular/core';
+import {Pipe, PipeTransform, Input} from '@angular/core';
 import {Burrito} from './burrito.model';
+
+
 
 @Pipe({
   name: "type",
@@ -8,8 +10,10 @@ import {Burrito} from './burrito.model';
 
 
 export class TypePipe implements PipeTransform {
-  transform(input: Burrito[], type) {
+
+  transform(input: Burrito[], type: string, types: string[]) {
     var output: Burrito[] = [];
+    console.log(Burrito.typesList)
     if( type === "Chicken") {
       for (var i = 0; i < input.length; i++) {
         if (input[i].type === "Chicken") {
@@ -24,9 +28,32 @@ export class TypePipe implements PipeTransform {
         }
       }
       return output;
-    } else if (type === "all") {
+    } else if (type === "Carne asada") {
       for (var i = 0; i < input.length; i++) {
-        output.push(input[i]);
+        if (input[i].type === "Carne asada") {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (type === "Carnitas") {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].type === "Carnitas") {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (type === "Veggie") {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].type === "Veggie") {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else if (type === "Chile verde") {
+      for (var i = 0; i < input.length; i++) {
+        if (input[i].type === "Chile verde") {
+          output.push(input[i]);
+        }
       }
       return output;
     } else {
