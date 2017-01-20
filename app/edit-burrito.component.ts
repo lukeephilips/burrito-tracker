@@ -10,7 +10,7 @@ import { Burrito } from './burrito.model';
 
 export class EditBurritoComponent {
   @Input() selectedBurrito: Burrito;
-  @Input() childTypes: string[];
+  @Input() types: string[];
 
 
   editComplete(){

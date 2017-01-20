@@ -9,7 +9,7 @@ import { Burrito } from './burrito.model';
 })
 
 export class NewBurritoComponent {
-  @Input() childTypes: string[];
+  @Input() types: string[];
   @Output() newBurritoSender = new EventEmitter();
   showNewBurrito: boolean = false;
 

@@ -13,7 +13,7 @@ import { EditBurritoComponent } from './edit-burrito.component';
 
 export class AppComponent {
   selectedBurrito: Burrito = null;
-  masterTypes: string[] = [
+  types: string[] = [
     'Carne asada',
     'Chicken',
     'Beef',
@@ -22,9 +22,9 @@ export class AppComponent {
     'Carnitas'
   ]
   masterBurritosList: Burrito[] = [
-    new Burrito('carne asada', 'Cancun Taqueria', true, 1000, new Date()),
-    new Burrito('chicken', 'Taqueria el Buen Sabor', false, 600, new Date(2016, 11, 17)),
-    new Burrito('chile verde', 'El Farolito', true, 1200, new Date(2017, 1, 6))
+    new Burrito('Carne asada', 'Cancun Taqueria', true, 1000, new Date()),
+    new Burrito('Chicken', 'Taqueria el Buen Sabor', false, 600, new Date(2016, 11, 17)),
+    new Burrito('Chile verde', 'El Farolito', true, 1200, new Date(2017, 1, 6))
   ]
   addBurrito(newBurrito){
     this.masterBurritosList.push(newBurrito);
