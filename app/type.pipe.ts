@@ -13,7 +13,6 @@ export class TypePipe implements PipeTransform {
 
   transform(input: Burrito[], type: string, types: string[]) {
     var output: Burrito[] = [];
-    console.log(Burrito.typesList)
     if( type === "Chicken") {
       for (var i = 0; i < input.length; i++) {
         if (input[i].type === "Chicken") {

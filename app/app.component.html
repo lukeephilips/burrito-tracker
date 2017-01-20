@@ -1,12 +1,13 @@
 <div class="container">
   <h1>Burrito Tracker</h1>
-  <div class="row">
-    <new-burrito (newBurritoSender)="addBurrito($event)" [types]="types"></new-burrito>
-  </div>
-  <div class="row">
-    <edit-burrito [selectedBurrito]="selectedBurrito" [types]="types"></edit-burrito>
-  </div>
-  <div class="row">
-    <burritos [childBurritosList]="masterBurritosList" [types]="types" (selectBurritoSender)="selectBurrito($event)"></burritos>
-  </div>
+
+<new-burrito (newBurritoSender)="addBurrito($event)" [types]="types"></new-burrito>
+
+<div class="row">
+  <edit-burrito [selectedBurrito]="selectedBurrito" [types]="types"></edit-burrito>
+</div>
+
+
+<burritos [childBurritosList]="masterBurritosList" [types]="types" (selectBurritoSender)="selectBurrito($event)"></burritos>
+
 </div>

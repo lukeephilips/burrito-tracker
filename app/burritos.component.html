@@ -1,21 +1,28 @@
-<div class="input-group">
-  <span class="input-group-addon">Filter</span>
-  <select class="form-control" (change)="onChange($event.target.value)">
-    <option value='all'>Show All</option>
-    <option *ngFor="let type of types" [value]=type>{{type}}</option>
-  </select>
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="input-group">
+      <span class="input-group-addon">Filter</span>
+      <select class="form-control" (change)="onChange($event.target.value)">
+        <option value='all'>Show All</option>
+        <option *ngFor="let type of types" [value]=type>{{type}}</option>
+      </select>
+    </div>
+  </div>
 </div>
 
-<div class="col-sm-4" *ngFor="let burrito of childBurritosList  | type:filterByType">
-  <div class="panel panel-primary" (click)="selectBurrito(burrito)">
-    <div class="panel-heading">
-      <h2>{{burrito.type}}</h2>
-    </div>
-    <div class="panel-body">
-      <p>From: {{burrito.restaurant}}</p>
-      <p>Super: {{burrito.isSuper}}</p>
-      <p>Calories: {{burrito.calories}}</p>
-      <span>Eaten on: {{burrito.date}}</span>
+<div class="row">
+  <div class="col-sm-4" *ngFor="let burrito of childBurritosList  | type:filterByType">
+    <div class="panel panel-primary" (click)="selectBurrito(burrito)">
+      <div class="panel-heading">
+        <h2>{{burrito.type}}</h2>
+      </div>
+      <div class="panel-body">
+        <p>From: {{burrito.restaurant}}</p>
+        <p>Super: {{burrito.isSuper}}</p>
+        <p>Calories: {{burrito.calories}}</p>
+        <span>Eaten on: {{burrito.date}}</span>
+      </div>
     </div>
   </div>
 </div>

@@ -1,16 +1,12 @@
-<div class="col-sm-6" *ngIf="selectedBurrito">
+<div class="col-sm-6 well" *ngIf="selectedBurrito">
+  <h2>{{selectedBurrito.type}}</h2>
     <div class="form-group">
       <div class="input-group">
         <span class="input-group-addon" for="burritoType">Type:</span>
-
-
-        <select [(ngModel)]="selectedBurrito"  class="form-control" id="burritoType">
-          <option *ngFor=" let type of types" [ngValue]="type">{{type}}</option>
+        <select [(ngModel)]="selectedBurrito.type"  name="burritoType" id="burritoType" class="form-control">
+          <option *ngFor=" let type of selectedBurrito.typesList" [ngValue]=type>{{type}}</option>
         </select>
-
-
       </div>
-
       <div class="input-group">
         <span class="input-group-addon">Restaurant:</span>
         <input [(ngModel)]="selectedBurrito.restaurant" class="form-control">
