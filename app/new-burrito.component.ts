@@ -10,20 +10,16 @@ import { Burrito } from './burrito.model';
 
 export class NewBurritoComponent {
   @Input() childTypes: string[];
-
-  test: string = "test";
-
   @Output() newBurritoSender = new EventEmitter();
-  newBurrito(type: string, restaurant: string, isSuper: boolean, calories: number, date: Date) {
-    console.log(isSuper);
-    // if (isSuper == "true") {
-    //   isSuper = true;
-    // } else {
-    //   isSuper = false;
-    // }
-    // console.log(isSuper);
+  showNewBurrito: boolean = false;
 
+  showForm(){
+    this.showNewBurrito = true;
+  }
+
+  newBurrito(type: string, restaurant: string, isSuper: boolean, calories: number, date: Date) {
     let newBurrito: Burrito = new Burrito(type, restaurant, isSuper, calories, date)
     this.newBurritoSender.emit(newBurrito);
+    this.showNewBurrito = false
   }
 }
