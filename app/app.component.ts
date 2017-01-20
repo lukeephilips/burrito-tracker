@@ -13,24 +13,17 @@ import { EditBurritoComponent } from './edit-burrito.component';
 
 export class AppComponent {
   selectedBurrito: Burrito = null;
-  types: string[] = [
-    'Carne asada',
-    'Chicken',
-    'Beef',
-    'Veggie',
-    'Chile verde',
-    'Carnitas'
-  ]
+  types: string[] = new Burrito('','',false, 0, '').typesList;
+
   masterBurritosList: Burrito[] = [
-    new Burrito('Carne asada', 'Cancun Taqueria', true, 1000, new Date()),
-    new Burrito('Chicken', 'Taqueria el Buen Sabor', false, 600, new Date(2016, 11, 17)),
-    new Burrito('Chile verde', 'El Farolito', true, 1200, new Date(2017, 1, 6))
+    new Burrito('Carne asada', 'Cancun Taqueria', true, 1000, '2017-01-12'),
+    new Burrito('Chicken', 'Taqueria el Buen Sabor', false, 600, '2016-12-24'),
+    new Burrito('Chile verde', 'El Farolito', true, 1200, '2017-01-03')
   ]
   addBurrito(newBurrito){
     this.masterBurritosList.push(newBurrito);
   }
   selectBurrito(burrito) {
   this.selectedBurrito = burrito;
-  console.log(this.selectedBurrito)
   }
 }

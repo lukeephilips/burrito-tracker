@@ -4,7 +4,7 @@
       <div class="input-group">
         <span class="input-group-addon" for="burritoType">Type:</span>
         <select [(ngModel)]="selectedBurrito.type"  name="burritoType" id="burritoType" class="form-control">
-          <option *ngFor=" let type of selectedBurrito.typesList" [ngValue]=type>{{type}}</option>
+          <option *ngFor=" let type of types" [ngValue]=type>{{type}}</option>
         </select>
       </div>
       <div class="input-group">
@@ -25,7 +25,7 @@
       </div>
       <div class="input-group">
         <span class="input-group-addon">Date:</span>
-        <input [(ngModel)]="selectedBurrito.date" type="text"  class="form-control">
+        <input [(ngModel)]="selectedBurrito.date" type="date"  class="form-control">
       </div>
   </div>
     <button type="button" name="button" class="btn btn-primary" (click)="editComplete()">Done</button>
