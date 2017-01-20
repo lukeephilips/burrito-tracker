@@ -10,53 +10,23 @@ import {Burrito} from './burrito.model';
 
 
 export class TypePipe implements PipeTransform {
-
-  transform(input: Burrito[], type: string, types: string[]) {
+  transform(input: Burrito[], type: string) {
     var output: Burrito[] = [];
-    if( type === "Chicken") {
-      for (var i = 0; i < input.length; i++) {
-        if (input[i].type === "Chicken") {
-          output.push(input[i]);
-        }
-      }
-      return output;
-    } else if (type === "Beef") {
-      for (var i = 0; i < input.length; i++) {
-        if (input[i].type === "Beef") {
-          output.push(input[i]);
-        }
-      }
-      return output;
-    } else if (type === "Carne asada") {
-      for (var i = 0; i < input.length; i++) {
-        if (input[i].type === "Carne asada") {
-          output.push(input[i]);
-        }
-      }
-      return output;
-    } else if (type === "Carnitas") {
-      for (var i = 0; i < input.length; i++) {
-        if (input[i].type === "Carnitas") {
-          output.push(input[i]);
-        }
-      }
-      return output;
-    } else if (type === "Veggie") {
-      for (var i = 0; i < input.length; i++) {
-        if (input[i].type === "Veggie") {
-          output.push(input[i]);
-        }
-      }
-      return output;
-    } else if (type === "Chile verde") {
-      for (var i = 0; i < input.length; i++) {
-        if (input[i].type === "Chile verde") {
-          output.push(input[i]);
-        }
-      }
-      return output;
-    } else {
+    var typesList = input[0].typesList;
+    if (type === 'all') {
       return input;
+    }
+    else {
+      for (var j = 0; j < typesList.length; j++) {
+        if( type === typesList[j]) {
+          for (var i = 0; i < input.length; i++) {
+            if (input[i].type === typesList[j]) {
+              output.push(input[i]);
+            }
+          }
+          return output;
+        }
+      }
     }
   }
 }
