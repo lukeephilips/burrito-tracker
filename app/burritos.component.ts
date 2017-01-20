@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Burrito } from './burrito.model';
 
 
@@ -10,5 +10,11 @@ import { Burrito } from './burrito.model';
 
 export class BurritosComponent {
   @Input() childBurritosList: Burrito[];
+  @Output() selectBurritoSender = new EventEmitter();
+
+  selectBurrito(burrito){
+    this.selectBurritoSender.emit(burrito);
+    console.log("clicked")
+  }
 
 }

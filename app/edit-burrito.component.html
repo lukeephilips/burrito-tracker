@@ -1,0 +1,32 @@
+<div class="col-sm-6" *ngIf="selectedBurrito">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon" for="burritoType">Type:</span>
+        <select [(ngModel)]="selectedBurrito.type"  class="form-control" id="burritoType">
+          <option *ngFor="let type of childTypes" [value]=type>{{type}}</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon">Restaurant:</span>
+        <input [(ngModel)]="selectedBurrito.restaurant" class="form-control">
+      </div>
+      <div class="form-group">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="isSuper" [(ngModel)]="selectedBurrito.isSuper">
+            Super
+          </label>
+        </div>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">Calories:</span>
+        <input [(ngModel)]="selectedBurrito.calories" type="number"  class="form-control">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">Date:</span>
+        <input [(ngModel)]="selectedBurrito.date" type="text"  class="form-control">
+      </div>
+  </div>
+    <button type="button" name="button" class="btn btn-primary" (click)="editComplete()">Done</button>
+</div>

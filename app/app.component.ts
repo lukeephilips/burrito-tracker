@@ -12,6 +12,7 @@ import { EditBurritoComponent } from './edit-burrito.component';
 })
 
 export class AppComponent {
+  selectedBurrito: Burrito = null;
   masterTypes: string[] = [
     'Carne asada',
     'Chicken',
@@ -27,5 +28,9 @@ export class AppComponent {
   ]
   addBurrito(newBurrito){
     this.masterBurritosList.push(newBurrito);
+  }
+  selectBurrito(burrito) {
+  this.selectedBurrito = burrito;
+  console.log(this.selectedBurrito)
   }
 }
