@@ -12,7 +12,8 @@ Allows user to:
 * track all the burritos they eat with type, restaurant, whether or not its 'super', and date
 * user can filter by burrito type
 * user can add and edit burritos
-* All epicodus assignment requirements for calories are begin completed with type - because who wants to know how many calories their burrito has
+* user can add burrito types, updating select options and filter 
+* Piping epicodus assignment requirements for calories are being completed with type - because who wants to know how many calories their burrito has ?!
 
 ## Instructions:
 
