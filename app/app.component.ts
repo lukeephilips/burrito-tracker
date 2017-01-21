@@ -26,4 +26,8 @@ export class AppComponent {
   selectBurrito(burrito) {
   this.selectedBurrito = burrito;
   }
+  addType(type){
+    console.log(type)
+    this.types.push(type);
+  }
 }

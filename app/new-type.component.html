@@ -1,0 +1,12 @@
+<div [ngSwitch]="showNewType">
+  <div *ngSwitchCase='true'>
+    <div class="input-group">
+      <span class="input-group-addon">Add Type:</span>
+      <input #newType class="form-control" class="form-control">
+      <span class="input-group-btn"><button type="button" name="button" class="btn btn-primary" (click)="addNewType(newType.value)">Add</button></span>
+    </div>
+  </div>
+  <div *ngSwitchCase='false'>
+    <button type="button" name="button" class="btn btn-primary btn-sm" (click)="showTypeForm()">Add new burrito type</button>
+  </div>
+</div>

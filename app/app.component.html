@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Burrito Tracker</h1>
 
-<new-burrito (newBurritoSender)="addBurrito($event)" [types]="types"></new-burrito>
+<new-burrito (newBurritoSender)="addBurrito($event)" (anotherTypeSender)="addType($event)"[types]="types"></new-burrito>
 
 <div class="row">
   <edit-burrito [selectedBurrito]="selectedBurrito" [types]="types"></edit-burrito>
